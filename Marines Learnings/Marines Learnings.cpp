@@ -107,7 +107,7 @@ public:
                     node_status[current_node] = STATUS_PROCESSED;
                 }
                 else {
-                    throw new std::out_of_range(
+                    throw std::out_of_range(
                         "Current node number out of range.");
                 }
                 for (int i = 0; i < graph[current_node].size(); ++i) {
@@ -115,7 +115,7 @@ public:
 
                     if (current_edge.from >= islands_number ||
                         current_edge.to >= islands_number) {
-                        throw new std::invalid_argument(
+                        throw std::invalid_argument(
                             "Invalid current edge.");
                     }
 
@@ -157,12 +157,12 @@ public:
                             graph[parent_node][parent_edge].back;
                     }
                     else {
-                        throw new std::out_of_range(
+                        throw std::out_of_range(
                             "Parent edge out of range.");
                     }
                 }
                 else {
-                    throw new std::out_of_range("Parent node out of range.");
+                    throw std::out_of_range("Parent node out of range.");
                 }
                 graph[parent_node][parent_edge].flow += EDGE_CAPACITY;
                 graph[current_node][back_parent_edge].flow -= EDGE_CAPACITY;
@@ -195,7 +195,7 @@ public:
                 }
             }
             else {
-                throw new std::out_of_range("Current node out of range");
+                throw std::out_of_range("Current node out of range");
             }
         }
         return way;
